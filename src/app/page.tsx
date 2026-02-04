@@ -1,12 +1,22 @@
+import Contact from "@/components/Contact";
+import Experience from "@/components/Experience";
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Header";
 import Hero from "@/components/Hero";
-import Image from "next/image";
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
+
 
 export default function Home() {
   return (
     <div className="w-full font-poppins">
       <Navbar/>
       <Hero/>
+      <Skills/>
+      <Experience/>
+      <Projects/>
+      <Contact/>
+      <Footer/>
     </div>
   );
 }

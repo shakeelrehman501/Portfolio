@@ -1,62 +1,127 @@
 
 "use client"
-import React, { useState } from 'react'
+import  { useState, useEffect } from 'react'
 import { NavItems } from '@/constants'
-import { FiGithub, FiLinkedin  } from "react-icons/fi";
 import { ModeToggle } from './ui/ModeToggle';
+import { LuGithub } from "react-icons/lu";
+import { FiLinkedin } from "react-icons/fi";
+import {  MenuIcon } from 'lucide-react';
+import { RxCross2 } from "react-icons/rx";
 function Navbar() {
 
-const [active, setActive] = useState('about')
-//   const [isScrolled, setIsScrolled] = useState(false);
-//  useEffect(() => {
-//     const handleScroll = () => {
-//       setIsScrolled(window.scrollY > 50);
-//     };
-//     window.addEventListener("scroll", handleScroll);
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, []);
+const [activeLink, setActiveLink] = useState('about')
+const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+ useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className='fixed w-full bg-background py-4 border-b border-b-white/10  '>
-    <div className='w-full max-w-350 mx-auto px-5 flex justify-between items-center '>
-     {/* Logo */}
-     <div className='flex items-center gap-2 '>
-        <div className='w-10 h-10 rounded-lg text-[20px] font-roboto font-semibold p-5 flex justify-center items-center bg-gradient-to-t from-[#3B82F6] to-[#155DFC] 
-        shadow-[0_10px_15px_-3px_rgba(59,130,246,0.4)]
-        shadow-[0_4px_6px_-4px_rgba(59,130,246,0.5)]'>
+     <header className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
+      <nav className="max-w-350 mx-auto px-6  lg:px-8 py-2">
+        <div className="flex justify-between items-center">
+          {/* Logo */}
+      <div className='flex items-center gap-2 '>
+        <div className='w-10 h-10 rounded-lg text-[20px] text-white font-roboto font-semibold p-5 flex justify-center items-center bg-gradient-to-t from-[#3B82F6] to-[#155DFC] 
+        shadow-[0_10px_15px_-3px_rgba(59,130,246,0.2)]
+        shadow-[0_4px_6px_-4px_rgba(59,130,246,0.2)]'>
             SR
         </div>
         <div>
             <h1 className='text-[20px] font-bold'>Shakeel<span className='text-[#3B82F6]'>.dev</span> </h1>
         </div>
     </div> 
-    
-    {/* Nav items */}
-    <ul className='flex gap-0.5  bg-gray-400/50 rounded-full px-3 py-2  '>
-        {
-        NavItems.map((item)=>(
-        <li key={item.id}>
-            <button
-            onClick={()=>setActive(item.id)}
-            className={`
-                rounded-full px-4 py-2
-                ${active === item.id? "bg-red-400" : ""}`}>
-                {item.label}
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center">
+            <div 
+              className="bg-gray-50/50 dark:bg-gray-800/50 rounded-full px-2.5 py-2.5 border border-gray-200/50 dark:border-gray-700/50"
+            >
+              <div className="flex items-center gap-1">
+                {NavItems.map((item) => (
+                  <a
+                    key={item.id}
+                    onClick={() => setActiveLink(item.id)}
+                    className={`px-5 py-2 rounded-full transition-all duration-200 cursor-pointer ${
+                      activeLink === item.id
+                        ? "bg-white dark:bg-gray-700 text-blue-600 dark:text-blue-400 shadow-sm"
+                        : "text-gray-900 dark:text-gray-300 hover:text-gray-600 dark:hover:text-gray-400"
+                    }`}
+                  >
+                    <span className="font-medium text-sm ">{item.label}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side Icons */}
+          <div className="hidden lg:flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <button 
+                className="p-2.5 rounded-xl text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                aria-label="Search"
+              >
+                <LuGithub size={24} />
+              </button>
+              <button 
+                className="p-2.5 rounded-xl text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                aria-label="Menu"
+              >
+                <FiLinkedin size={24} />
+              </button>
+            </div>
+            
+            <div className="w-px h-6 bg-gray-300 dark:bg-gray-700" />
+            
+            <ModeToggle />
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden flex items-center gap-4">
+            <ModeToggle />
+            <button 
+              className="p-2 text-gray-600 dark:text-gray-400"  
+            >
+            {isOpen ? (<RxCross2 size={26}  onClick={()=>setIsOpen(false)}
+              className='w-10 h-10 p-2  rounded-xl text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors'
+              />) 
+            : (<MenuIcon size={26} onClick={()=>setIsOpen(true)}
+            className='w-10 h-10 p-2 rounded-xl text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors'
+            />)}
             </button>
-        </li>
-        ))
-    }
-    </ul>
-    <div className='flex items-center gap-4'>
-        <div className='flex gap-3'>
-            <FiGithub size={24} className='text-[#94A3B8]' />
-            <FiLinkedin size={24} className='text-[#94A3B8]'/>
+          </div>
         </div>
-        <div className='w-0.5 h-8 bg-[#1E293B]'/>
-        <ModeToggle/>
-    </div>
-    </div>
-    </nav>
+
+        {/* Mobile Navigation */}
+        <div className={`lg:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-800
+          
+          `}>
+          {isOpen && (
+          <div className="flex flex-col gap-2">
+            {NavItems.map((item) => (
+              <a
+                key={item.id}
+                
+                onClick={() => setActiveLink(item.label)}
+                className={`px-4 py-2 rounded-lg transition-colors  ${
+                  activeLink === item.label
+                    ? "bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                }`}
+              >
+                <span className="font-medium text-sm ">{item.label}</span>
+              </a>
+            ))}
+          </div>
+          )}
+        </div>
+      </nav>
+    </header>
   )
 }
 

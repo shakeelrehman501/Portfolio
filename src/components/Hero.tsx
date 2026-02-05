@@ -16,11 +16,9 @@ function Hero() {
               Hi, I am
             </p>
             <h1 
-              className="font-['Poppins'] font-bold text-[56px] lg:text-[67.476px] leading-normal bg-clip-text"
-              style={{ 
-                backgroundImage: "linear-gradient(to right, rgb(34, 91, 251) 0%, rgb(228, 0, 123) 100%)", 
-                WebkitTextFillColor: "transparent" 
-              }}
+              className='font-poppins font-bold text-[56px] lg:text-[68px] leading-normal
+               bg-gradient-to-r from-blue-600 to-pink-600
+               bg-clip-text text-transparent'
             >
               Shakeel Rehman
             </h1>
@@ -39,7 +37,13 @@ function Hero() {
             {/* Download CV Button */}
             <div className="pt-4">
               <button 
-                className="bg-gradient-to-r from-[#1b5dfc] to-[#9617fa] text-white font-['Poppins'] font-bold text-[18px] px-[25px] py-[10px] h-[69px] w-[214px] rounded-full hover:shadow-xl hover:shadow-purple-500/30 dark:hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 hover:brightness-110"
+                className="bg-gradient-to-r 
+                from-blue-600 to-violet-700
+                
+                shadow-2xl
+
+
+                text-white font-['Poppins'] font-bold text-[18px] px-[25px] py-[10px] h-[69px] w-[214px] rounded-full hover:shadow-xl hover:shadow-purple-500/30 dark:hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 hover:brightness-110"
               >
                 DOWNLOAD CV
               </button>

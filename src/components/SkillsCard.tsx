@@ -15,25 +15,22 @@ function SkillsCard({ icon:Icon, color, name, proficiency }: SkillCardProps) {
         <div className="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
           <Icon style={{color}} size={40} className='text-[#E44F26]'/>
         </div>
-        <h3 className="text-xl font-bold font-['Poppins'] text-gray-900 dark:text-gray-100">{name}</h3>
+        <h3 className="text-xl font-bold  text-gray-900 dark:text-gray-100">{name}</h3>
       </div>
       
       <div className="space-y-2">
         <div className="flex justify-between items-center">
-          <p className="text-sm font-semibold font-['Poppins'] text-gray-600 dark:text-gray-400">Proficiency</p>
+          <p className="text-sm font-semibold  text-gray-600 dark:text-gray-400">Proficiency</p>
           <p 
-            className="text-sm font-semibold font-['Poppins'] bg-clip-text"
-            style={{ 
-              backgroundImage: "linear-gradient(rgb(34, 91, 251) 0%, rgb(228, 0, 123) 100%)", 
-              WebkitTextFillColor: "transparent" 
-            }}
+            className="text-sm font-semibold  bg-clip-text bg-gradient-to-r from-blue-400 to-blue-500 text-transparent"
+            
           >
             {proficiency}%
           </p>
         </div>
         <div className="bg-gray-200 dark:bg-gray-700 h-4 rounded-full overflow-hidden">
           <div 
-            className="h-full bg-gradient-to-b from-[#4ea0ff] to-[#2568fc] rounded-full transition-all duration-500"
+            className="h-full bg-gradient-to-b from-blue-400 to-blue-600 rounded-full transition-all duration-500"
             style={{ width: `${proficiency}%` }}
           />
         </div>

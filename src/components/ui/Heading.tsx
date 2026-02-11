@@ -1,5 +1,5 @@
 'use client';
-import {easeInOut, easeOut, motion} from "framer-motion"
+import {easeOut, motion} from "framer-motion"
 type Props = {
   heading?: string;
   gradientHeading?: string;
@@ -31,7 +31,12 @@ function Heading({ heading, gradientHeading, paragraph, className, animateOnLoad
     <motion.div
       variants={container}
       initial="hidden"
-      animate="visible" 
+       {...(animateOnLoad
+        ? { animate: "visible" }      // animate on page load
+        : {
+            whileInView: "visible",   // animate on scroll
+            viewport: { once: true, amount: 0.3 }
+          })} 
       className="text-center mb-16">
       <motion.div
       variants={fadeUp}

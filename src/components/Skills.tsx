@@ -1,11 +1,24 @@
+"use client"
 import React from 'react'
-import { skillsCardData } from '@/Data/constants'
-import {skillsCardType} from "@/Data/constants"
+import { skillsCardType, skillsCardData } from '@/Data/constants'
 import Heading from './ui/Heading'
+import {easeInOut, easeOut, motion} from "framer-motion"
+
+const container = {
+  hidden:{},
+  visible:{transition:{staggerChildren:0.15}}
+}
+const cardVariant = {
+  hidden:{opacity:0, y:40},
+  visible:{opacity:1, y:0, transition:{duration:0.6, ease:easeOut}}
+}
+
 
 function SkillsCard({ icon:Icon, color, name, proficiency }: skillsCardType) {
   return (
-    <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300">
+    <motion.div 
+    variants={cardVariant}
+    className="bg-white dark:bg-gray-800 p-6 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300">
       <div className="flex items-center gap-4 mb-4">
         <div className="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
           <Icon style={{color}} size={40} className='text-[#E44F26]'/>
@@ -24,13 +37,17 @@ function SkillsCard({ icon:Icon, color, name, proficiency }: skillsCardType) {
           </p>
         </div>
         <div className="bg-gray-200 dark:bg-gray-700 h-4 rounded-full overflow-hidden">
-          <div 
+          <motion.div
+           initial={{ width: 0 }}
+            whileInView={{ width: `${proficiency}%` }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5,  ease:easeOut }}
             className="h-full bg-gradient-to-b from-blue-400 to-blue-600 rounded-full transition-all duration-500"
             style={{ width: `${proficiency}%` }}
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
@@ -42,11 +59,17 @@ function Skills() {
         <Heading heading='Skills &' gradientHeading='Expertise' paragraph='A collection of my technical skills and expertise honed through various projects and experiences'/>
 
         {/* Skills Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div 
+        variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{duration:1, ease:easeInOut}}
+        className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillsCardData.map((skill) => (
             <SkillsCard key={skill.name} {...skill} />
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

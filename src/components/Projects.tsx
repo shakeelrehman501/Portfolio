@@ -1,10 +1,65 @@
+"use client"
 import React from 'react'
 import { projectsCardData } from '@/Data/constants'
 import Heading from './ui/Heading'
+import {easeOut, motion} from "framer-motion"
 
-function Projects() {
+const container = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.25,
+      delayChildren: 0.9
+    }
+  }
+}
+
+const cardVariant = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: easeOut // smooth professional cubic-bezier
+    }
+  }
+}
+
+const tagContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.08
+    }
+  }
+}
+
+const tagVariant = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.3 }
+  }
+}
+
+
+type Props = {
+  animateOnLoad?:boolean
+}
+function Projects({animateOnLoad=false}:Props) {
   return (
-    <section id="projects" className="bg-gray-50 dark:bg-gray-900 py-16 lg:py-20 transition-colors">
+    <motion.section
+    variants={container} 
+    initial="hidden"
+       {...(animateOnLoad
+        ? { animate: "visible" }      // animate on page load
+        : {
+            whileInView: "visible",   // animate on scroll
+            viewport: { once: true, amount: 0.3 }
+          })} 
+    id="projects" className="bg-gray-50 dark:bg-gray-900 py-16 lg:py-20 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <Heading heading='Featured' gradientHeading='Projects' paragraph='A showcase of my recent work and side projects' />
@@ -12,8 +67,9 @@ function Projects() {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {projectsCardData.map((project, index) => (
-            <div
-              key={index}
+            <motion.div
+            key={index}
+            variants={cardVariant}
               className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:scale-105 group"
             >
               {/* Project Image */}
@@ -45,16 +101,19 @@ function Projects() {
                 </p>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
+                <motion.div 
+                variants={tagContainer}
+                className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span
+                    <motion.span
+                    variants={tagVariant}
                       key={tag}
                       className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-xs font-medium font-['Poppins']"
                     >
                       {tag}
-                    </span>
+                    </motion.span>
                   ))}
-                </div>
+                </motion.div>
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
@@ -72,11 +131,11 @@ function Projects() {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

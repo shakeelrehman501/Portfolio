@@ -1,19 +1,24 @@
 "use client";
 import React, { useState } from "react";
 import Heading from "./ui/Heading";
-import { ContactCardType } from "@/Data/constants";
-import { contactCardData } from "@/Data/constants";
+import { ContactCardType, contactCardData } from "@/Data/constants";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
+import { easeOut, motion } from "framer-motion";
 
-
-function ContactInfoCard({icon:Icon, title, data}:ContactCardType) {
+function ContactInfoCard({ icon: Icon, title, data }: ContactCardType) {
   return (
-    <div className="bg-white dark:bg-[#0f172a] rounded-2xl p-6 border border-[#e2e8f0] dark:border-[#1e293b] shadow-sm transition-colors">
+    <motion.div
+      initial={{ opacity: 0, x: -60 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: easeOut }}
+      className="bg-white dark:bg-[#0f172a] rounded-2xl p-6 border border-[#e2e8f0] dark:border-[#1e293b] shadow-sm transition-colors"
+    >
       {/* Icon */}
       <div className="bg-[rgba(37,99,235,0.1)] dark:bg-[rgba(59,130,246,0.15)] w-12 h-12 rounded-[12px] flex items-center justify-center mb-4 transition-colors">
-        <Icon/>
+        <Icon size={24} />
       </div>
       {/* Heading */}
       <h3 className=" font-bold text-[18px] text-[#0f172a] dark:text-[#f8fafc] tracking-[-0.45px] leading-7 mb-2 transition-colors">
@@ -23,7 +28,7 @@ function ContactInfoCard({icon:Icon, title, data}:ContactCardType) {
       <p className=" text-[14px] text-[#64748b] dark:text-[#94a3b8] leading-5 transition-colors">
         {data}
       </p>
-    </div>
+    </motion.div>
   );
 }
 
@@ -64,8 +69,10 @@ function Contact() {
         setLoading(false);
       });
   };
-  const labelClass = "block font-medium text-[16px] text-foreground/90  leading-[20px] mb-2 transition-colors";
-  const inputClass = "w-full bg-gray-100 dark:bg-gray-800 text-foreground placeholder:text-foreground/50  px-4 py-3 rounded-[12px] text-[16px] focus:outline-none focus:ring-2 focus:ring-primary transition-all";
+  const labelClass =
+    "block font-medium text-[16px] text-foreground/90  leading-[20px] mb-2 transition-colors";
+  const inputClass =
+    "w-full bg-gray-100 dark:bg-gray-800 text-foreground placeholder:text-foreground/50  px-4 py-3 rounded-[12px] text-[16px] focus:outline-none focus:ring-2 focus:ring-primary transition-all";
   return (
     <section
       id="contact"
@@ -91,23 +98,27 @@ function Contact() {
         />
 
         {/* Contact Cards & Form */}
-        
+
         <div className="grid lg:grid-cols-[336px_1fr] gap-6 max-w-276 mx-auto">
           {/* Information Card */}
           <div className="flex flex-col gap-6">
-            {contactCardData.map((item, index)=>(
-                <ContactInfoCard key={index} {...item}/>
-              ))}
+            {contactCardData.map((item, index) => (
+              <ContactInfoCard key={index} {...item} />
+            ))}
           </div>
 
           {/* Right Side - Contact Form */}
-          <div className="bg-white dark:bg-[#0f172a] rounded-3xl p-10 border border-[#e2e8f0] dark:border-[#1e293b] shadow-xl transition-colors">
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: easeOut }}
+            className="bg-white dark:bg-[#0f172a] rounded-3xl p-10 border border-[#e2e8f0] dark:border-[#1e293b] shadow-xl transition-colors"
+          >
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Input */}
               <div>
-                <label className={labelClass}>
-                  Your Name
-                </label>
+                <label className={labelClass}>Your Name</label>
                 <input
                   name="name"
                   type="text"
@@ -121,9 +132,7 @@ function Contact() {
 
               {/* Email Input */}
               <div>
-                <label className={labelClass}>
-                  Your Email
-                </label>
+                <label className={labelClass}>Your Email</label>
                 <input
                   name="email"
                   type="email"
@@ -137,9 +146,7 @@ function Contact() {
 
               {/* Message Textarea */}
               <div>
-                <label className={labelClass}>
-                  Message
-                </label>
+                <label className={labelClass}>Message</label>
                 <textarea
                   name="message"
                   placeholder="Tell me about your project..."
@@ -159,7 +166,7 @@ function Contact() {
                 {loading ? "Sending..." : "Send Message"}
               </button>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

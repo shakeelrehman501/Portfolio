@@ -1,7 +1,16 @@
-import React from "react";
-import { NavItems, socialLinks } from "@/constants";
+"use client"
+import React, { useState } from "react";
+import { NavItems, socialLinks } from "@/Data/constants";
 
 function Footer() {
+const [isActive, setIsActive] = useState('')
+
+const handleFooterItemClick = (sectionId:string)=>{
+      setIsActive(sectionId)
+      const section = document.getElementById(sectionId);
+      section?.scrollIntoView({ behavior: "smooth" });
+}
+
   return (
     <footer className="relative bg-gray-900 dark:bg-black text-white py-12 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,19 +48,20 @@ function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold   mb-4">
+            <h4 className="text-lg font-bold  mb-4">
               Quick Links
             </h4>
-            <ul className="space-y-2">
+            <ul className=" space-y-2">
               {NavItems.map((link) => (
-                <li key={link.id}>
-                  <a
-                    href={link.id}
-                    className="text-gray-400 hover:text-purple-400   transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
+              <li key={link.id}>          
+                    <button onClick={()=>handleFooterItemClick(link.id)}
+                      className={`text-gray-400 hover:text-purple-400 transition-colors
+                      ${isActive === link.id ? "text-purple-400" : ""}
+                        `}
+                      >
+                      {link.label}
+                      </button>
+              </li>
               ))}
             </ul>
           </div>
@@ -63,7 +73,11 @@ function Footer() {
             </h4>
             <ul className="space-y-2 text-gray-400  ">
               <li>Email: shakeelrehman501@gmail.com</li>
-              <li>Phone: 0300-0787595</li>
+              <li>Phone: {""}
+                <a href="tel:+923000787595" className="hover:text-purple-400">
+                  0300-0787595
+                </a>
+                </li>
               <li>Address: Barkat Market, Lahore</li>
             </ul>
           </div>

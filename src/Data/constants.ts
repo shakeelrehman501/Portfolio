@@ -7,15 +7,27 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { FaReact } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
-import Image from "next/image";
-export interface Skill {
+import { GrInstagram } from "react-icons/gr";
+import { FiGithub } from "react-icons/fi";
+import { LuLinkedin, LuFacebook  } from "react-icons/lu";
+import { HiOutlineMail } from "react-icons/hi";
+import { FiPhoneCall } from "react-icons/fi";
+import { GrLocation } from "react-icons/gr";
+
+export const NavItems = [
+    {id:"about", label:"About"},
+    {id:"skills", label:"Skills"},
+    {id:"experience", label:"Experience"},
+    {id:"projects", label:"Projects"},
+    {id:"contact", label:"Contact"}
+]
+export interface skillsCardType {
   name: string;
   icon: IconType;
   color?:string;
   proficiency: number;
 }
-
-export const skills:Skill[] = [
+export const skillsCardData:skillsCardType[] = [
     {
       name: "HTML",
       icon: TfiHtml5,
@@ -58,21 +70,23 @@ export const skills:Skill[] = [
       color: "#3178C6",
       proficiency: 82,
     },
-  ];
+];
 
+export interface experienceCardType {
+  company: string;
+    logo: React.ReactNode;
+    position: string;
+    type: string;
+    date: string;
+    location: string;
+    description: string;
+    tags: string[];
+}
 
-export const  experienceData = [
+export const  experienceCardData:experienceCardType[] = [
     {
       company: "Lintent",
-      logo:"Logo",
-      // logo: (
-      //   <div className="flex items-center">
-      //     {/* <svg className="w-7 h-9" fill="none" viewBox="0 0 28.1069 36.9919">
-      //       <path d={svgPaths.p20b6b800} fill="#0461F2" />
-      //     </svg> */}
-      //     <span className="ml-1 text-2xl font-bold font-['Inter'] text-[#0461f2]">oxel</span>
-      //   </div>
-      // ),
+      logo:"Boxel",
       position: "Frontend Developer",
       type: "Internship Hunt",
       date: "Dec 2025 - Jan 2026",
@@ -81,15 +95,9 @@ export const  experienceData = [
         "Gaining valuable experience in frontend development, worked on building responsive web applications and modern user interfaces. Collaborated with teams to develop scalable solutions using modern technologies and best practices. Focused on writing clean, maintainable code and improving user experience through innovative design patterns.",
       tags: ["HTML", "JavaScript", "Tailwind CSS", "React", "Next.js", "TypeScript"],
     },
-  ]
-
-export const NavItems = [
-    {id:"about", label:"About"},
-    {id:"experience", label:"Experience"},
-    {id:"skills", label:"Skills"},
-    {id:"projects", label:"Projects"},
-    {id:"contact", label:"Contact"}
 ]
+
+
 export interface Links {
   name: string;
   icon:IconType;
@@ -98,35 +106,34 @@ export interface Links {
 export const socialLinks:Links[] = [
     {
       name: "Facebook",
-      icon: TfiHtml5,
-      href: "#",
+      icon: LuFacebook,
+      href: "https://github.com/dashboard",
     },
     {
-      name: "Twitter",
-      icon: TfiHtml5,
-      href: "#",
+      name: "Github",
+      icon: FiGithub,
+      href: "https://github.com/dashboard",
     },
     {
-      name: "LinkedIn",
-      icon: TfiHtml5,
+      name: "https://www.linkedin.com/in/shakeel-rehman-332339251/",
+      icon: LuLinkedin ,
       href: "#",
     },
     {
       name: "Instagram",
-      icon: TfiHtml5,
-      href: "#",
+      icon: GrInstagram ,
+      href: "https://www.linkedin.com/in/shakeel-rehman-332339251/",
     },
-  ];
-
-export const projectsData = [
+];
+export const projectsCardData = [
     {
       title: "To do List",
       description:
         "A simple yet powerful to-do list application built with modern web technologies. Features include task creation, editing, deletion, and status tracking with a clean and intuitive user interface.",
       image: '/Todo.jpg',
       tags: ["HTML", "CSS", "JavaScript"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://boxeltechnology.com/",
+      githubUrl: "https://github.com/shakeelrehman501/Portfolio",
     },
     {
       title: "To do List",
@@ -146,4 +153,28 @@ export const projectsData = [
       liveUrl: "#",
       githubUrl: "#",
     },
-  ];
+];  
+
+
+export interface ContactCardType {
+  icon:IconType,
+  title:string,
+  data:string
+}
+export const contactCardData:ContactCardType[] = [
+  {
+    icon:HiOutlineMail, 
+    title:"Email",
+    data:"shakeelrehman501@gmail.com"
+  },
+  {
+    icon:FiPhoneCall, 
+    title:"Phone",
+    data:"0300-0787595"
+  },
+  {
+    icon:GrLocation, 
+    title:"Location",
+    data:"Barkat Market, Lahore"
+  },
+]

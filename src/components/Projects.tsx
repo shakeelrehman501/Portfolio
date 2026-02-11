@@ -1,5 +1,5 @@
 import React from 'react'
-import { projectsData } from '@/constants'
+import { projectsCardData } from '@/Data/constants'
 import Heading from './ui/Heading'
 
 function Projects() {
@@ -11,7 +11,7 @@ function Projects() {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {projectsData.map((project, index) => (
+          {projectsCardData.map((project, index) => (
             <div
               key={index}
               className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:scale-105 group"

@@ -5,15 +5,13 @@ import { ContactCardType, contactCardData } from "@/Data/constants";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
-import { easeOut, motion } from "framer-motion";
+import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { AnimatedItem } from "@/components/ui/AnimatedItem";
+
 
 function ContactInfoCard({ icon: Icon, title, data }: ContactCardType) {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -60 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.6, ease: easeOut }}
+    <div
       className="bg-white dark:bg-[#0f172a] rounded-2xl p-6 border border-[#e2e8f0] dark:border-[#1e293b] shadow-sm transition-colors"
     >
       {/* Icon */}
@@ -28,7 +26,7 @@ function ContactInfoCard({ icon: Icon, title, data }: ContactCardType) {
       <p className=" text-[14px] text-[#64748b] dark:text-[#94a3b8] leading-5 transition-colors">
         {data}
       </p>
-    </motion.div>
+    </div>
   );
 }
 
@@ -101,20 +99,24 @@ function Contact() {
 
         <div className="grid lg:grid-cols-[336px_1fr] gap-6 max-w-276 mx-auto">
           {/* Information Card */}
-          <div className="flex flex-col gap-6">
+          <AnimatedSection 
+           
+  
+          className="flex flex-col gap-6">
             {contactCardData.map((item, index) => (
-              <ContactInfoCard key={index} {...item} />
+              <AnimatedItem key={index} type="slideLeft">
+                <ContactInfoCard {...item} />
+              </AnimatedItem>
             ))}
-          </div>
+          </AnimatedSection>
 
           {/* Right Side - Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, ease: easeOut }}
+          <AnimatedSection>
+          <AnimatedItem type="slideRight"
+            
             className="bg-white dark:bg-[#0f172a] rounded-3xl p-10 border border-[#e2e8f0] dark:border-[#1e293b] shadow-xl transition-colors"
           >
+          
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Input */}
               <div>
@@ -161,12 +163,14 @@ function Contact() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-primary   text-foreground  font-semibold text-[18px] leading-6 py-4 rounded-[12px] shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-3 group"
+                className="w-full bg-primary   text-gray-200  font-semibold text-[18px] leading-6 py-4 rounded-[12px] shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-3 group"
               >
                 {loading ? "Sending..." : "Send Message"}
               </button>
             </form>
-          </motion.div>
+          
+          </AnimatedItem>
+          </AnimatedSection>
         </div>
       </div>
     </section>

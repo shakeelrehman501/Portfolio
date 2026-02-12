@@ -125,7 +125,17 @@ export const socialLinks:Links[] = [
       href: "https://www.linkedin.com/in/shakeel-rehman-332339251/",
     },
 ];
-export const projectsCardData = [
+
+export interface projectsCardType {
+  title:string;
+  description:string;
+  image:string;
+  tags:string[];
+  liveUrl:string;
+  githubUrl:string
+}
+
+export const projectsCardData:projectsCardType[] = [
     {
       title: "To do List",
       description:

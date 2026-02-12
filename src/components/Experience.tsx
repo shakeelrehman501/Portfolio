@@ -3,42 +3,10 @@ import React from 'react'
 import Heading from './ui/Heading'
 import { experienceCardData } from '@/Data/constants'
 import { experienceCardType } from '@/Data/constants'
-import {easeOut, motion} from "framer-motion"
-
-const container = {
-  hidden:{},
-  visible:{
-    transition:{stagerChildren:0.2}
-  }
-}
-const cardVariant = {
-  hidden:{opacity:0, y:50},
-  visible:{opacity:1, y:0, 
-    transition:{duration:0.7, ease:easeOut}
-  }
-}
-
-const tagContainer = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.3
-    }
-  }
-}
-
-const tagVariant = {
-  hidden: { opacity: 0, y: 15 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.4 }
-  }
-}
-
+import {AnimatedSection} from "@/components/ui/AnimatedSection"
+import {AnimatedItem} from "@/components/ui/AnimatedItem"
 
 function ExperienceCard({
-  company,
   logo,
   position,
   type,
@@ -48,10 +16,8 @@ function ExperienceCard({
   tags,
 }: experienceCardType) {
   return (
-    <motion.div 
-    variants={cardVariant}
-    whileHover={{y:-6}}
-    transition={{duration:0.3}}
+    <div
+
     className="bg-white dark:bg-gray-800 p-8 rounded-2xl border-2 border-gray-200 dark:border-gray-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all duration-300 hover:shadow-xl">
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Company Logo */}
@@ -87,25 +53,27 @@ function ExperienceCard({
             {description}
           </p>
 
-          <motion.div 
-          variants={tagContainer}
+          
+          <AnimatedSection
+          
           className="flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <motion.span
-              variants={tagVariant}
-              whileInView={{opacity:1, }}
-              viewport={{once:true}}
-              transition={{duration:0.2}}
-                key={tag}
-                className="px-4 py-2 bg-gradient-to-b from-[#2957f7] to-[#9517fa] text-white rounded-full text-sm font-medium font-['Poppins']"
+              <AnimatedItem key={tag} type='slideUp'>
+              <span
+              
+                
+                className="px-4 py-2 bg-gradient-to-t from-blue-600 to-violet-500 text-white rounded-full text-sm font-medium font-['Poppins']"
               >
+
                 {tag}
-              </motion.span>
+              </span>
+              </AnimatedItem>
             ))}
-          </motion.div>
+          </AnimatedSection>
+            
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -117,17 +85,15 @@ function Experience() {
         <Heading gradientHeading='Experience' paragraph='A collection of my work experience and the roles I have taken in this organization'/>
         
         {/* Experience Cards */}
-        <motion.div 
-        variants={container}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{once:true, amount:0.2}}
+        <AnimatedSection 
         className="space-y-6">
           {experienceCardData.map((data, index) => (
-            <ExperienceCard key={index} {...data} />
-          ))}
+          <AnimatedItem key={index} type='slideLeft'>
+              <ExperienceCard  {...data} />
+            </AnimatedItem>
+            ))}
           
-        </motion.div>
+        </AnimatedSection>
       </div>
     </section>
   )

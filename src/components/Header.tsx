@@ -6,8 +6,8 @@ import { LuGithub } from "react-icons/lu";
 import { FiLinkedin } from "react-icons/fi";
 import { MenuIcon } from "lucide-react";
 import { RxCross2 } from "react-icons/rx";
-import {motion, AnimatePresence} from "framer-motion"
-
+import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { AnimatedItem } from "@/components/ui/AnimatedItem";
 
 function MenuIcons (){
   return (
@@ -76,15 +76,13 @@ useEffect(() => {
   // }, []);
 
   return (
-    <motion.header 
-    initial={{opacity:0, y:-30}}
-    animate={{opacity:1, y:0}}
-    transition={{duration:0.2, ease:"easeOut"}}
+    // Header
+    <AnimatedSection 
     className="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
-      <nav className="max-w-350 mx-auto px-6  lg:px-8 py-2">
+      <nav  className="max-w-350 mx-auto px-6  lg:px-8 py-2">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center gap-2 ">
+          <AnimatedItem type="slideLeft" className="flex items-center gap-2 ">
             <div
               className="w-10 h-10 rounded-lg text-[20px] text-white font-roboto font-semibold p-5 flex justify-center items-center bg-gradient-to-t from-[#3B82F6] to-[#155DFC] 
         shadow-[0_10px_15px_-3px_rgba(59,130,246,0.2)]
@@ -97,15 +95,16 @@ useEffect(() => {
                 Shakeel<span className="text-[#3B82F6]">.dev</span>{" "}
               </h1>
             </div>
-          </div>
+          </AnimatedItem>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center">
+          <AnimatedSection>
+            <AnimatedItem type="slideUp" className="hidden lg:flex items-center">
             <div className="bg-gray-50/50 dark:bg-gray-800/50 rounded-full px-2.5 py-2.5 border border-gray-200/50 dark:border-gray-700/50">
               <div className="flex items-center gap-1">
-                {NavItems.map((item) => (
+                {NavItems.map((item, index) => (
                   <a
-                    key={item.id}
+                    key={index}
                     onClick={()=>handleMenuItemClick(item.id)}
                     className={`px-5 py-2 rounded-full transition-all duration-200 cursor-pointer ${
                       activeLink === item.id
@@ -113,6 +112,7 @@ useEffect(() => {
                         : "text-gray-900 dark:text-gray-300 hover:text-gray-600 dark:hover:text-gray-400"
                     }`}
                   >
+                    
                     <span
                     className="font-medium text-sm "
                     >
@@ -123,15 +123,16 @@ useEffect(() => {
                 ))}
               </div>
             </div>
-          </div>
+          </AnimatedItem>
+          </AnimatedSection>
 
           {/* Right Side Icons */}
-          <div className="hidden lg:flex items-center gap-4">
+          <AnimatedItem type="slideRight" className="hidden lg:flex items-center gap-4">
             <MenuIcons/>
             <div className="w-px h-6 bg-gray-300 dark:bg-gray-700" />
 
             <ModeToggle />
-          </div>
+          </AnimatedItem>
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden flex items-center gap-4">
@@ -180,7 +181,8 @@ useEffect(() => {
           
         </div>
       </nav>
-    </motion.header>
+    </AnimatedSection>
+
   );
 }
 

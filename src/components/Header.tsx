@@ -135,7 +135,7 @@ useEffect(() => {
           </AnimatedItem>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden flex items-center gap-4">
+          <div className="lg:hidden flex items-center gap-1 sm:gap-4">
             <ModeToggle />
             <button className="p-2 text-gray-600 dark:text-gray-400">
               {isOpen ? (
@@ -162,15 +162,16 @@ useEffect(() => {
         >
           {isOpen && (
             <div className="flex flex-col gap-2 justify-center items-center">
-              {NavItems.map((item) => (
+              {NavItems.map((item, index) => (
+                
                 <a
-                  key={item.id}
-                  onClick={() => setActiveLink(item.label)}
-                  className={`px-4 py-2 rounded-lg transition-colors  ${
-                    activeLink === item.label
-                      ? "bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 w-fit"
-                      : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
-                  }`}
+                 key={index}
+                    onClick={()=>handleMenuItemClick(item.id)}
+                    className={`px-5 py-2 rounded-full transition-all duration-200 cursor-pointer ${
+                      activeLink === item.id
+                        ? "bg-white dark:bg-gray-700 text-blue-600 dark:text-blue-400 shadow-sm"
+                        : "text-gray-900 dark:text-gray-300 hover:text-gray-600 dark:hover:text-gray-400"
+                    }`}
                 >
                   <span className="font-medium text-sm ">{item.label}</span>
                 </a>

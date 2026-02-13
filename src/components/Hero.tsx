@@ -88,7 +88,7 @@ function Hero() {
                   <AnimatedItem type="slideRight" index={1}>
                     <Tilt>
                       <Image
-                        src={"/myImage.png"}
+                        src={"./myImage.png"}
                         alt=""
                         width={600}
                         height={300}

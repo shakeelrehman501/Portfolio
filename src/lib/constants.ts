@@ -138,7 +138,7 @@ export const projectsCardData:projectsCardType[] = [
       title: "To do List",
       description:
         "A simple yet powerful to-do list application built with modern web technologies. Features include task creation, editing, deletion, and status tracking with a clean and intuitive user interface.",
-      image: '/todo.jpg',
+      image: '/projectImage.jpg',
       tags: ["HTML", "CSS", "JavaScript"],
       liveUrl: "https://boxeltechnology.com/",
       githubUrl: "https://github.com/shakeelrehman501/Portfolio",
@@ -147,7 +147,7 @@ export const projectsCardData:projectsCardType[] = [
       title: "To do List",
       description:
         "A simple yet powerful to-do list application built with modern web technologies. Features include task creation, editing, deletion, and status tracking with a clean and intuitive user interface.",
-      image: '/todo.jpg',
+      image: '/projectImage.jpg',
       tags: ["HTML", "CSS", "JavaScript"],
       liveUrl: "#",
       githubUrl: "#",
@@ -156,7 +156,7 @@ export const projectsCardData:projectsCardType[] = [
       title: "To do List",
       description:
         "A simple yet powerful to-do list application built with modern web technologies. Features include task creation, editing, deletion, and status tracking with a clean and intuitive user interface.",
-      image: '/todo.jpg',
+      image: '/projectImage.jpg',
       tags: ["HTML", "CSS", "JavaScript", "React",],
       liveUrl: "#",
       githubUrl: "#",

@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { NavItems } from "@/Data/constants";
+import { NavItems } from "@/lib/constants";
 import { ModeToggle } from "./ui/ModeToggle";
 import { LuGithub } from "react-icons/lu";
 import { FiLinkedin } from "react-icons/fi";
@@ -178,7 +178,6 @@ useEffect(() => {
               <MenuIcons/>
             </div>
           )}
-          
         </div>
       </nav>
     </AnimatedSection>

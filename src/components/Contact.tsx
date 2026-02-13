@@ -1,19 +1,16 @@
 "use client";
 import React, { useState } from "react";
 import Heading from "./ui/Heading";
-import { ContactCardType, contactCardData } from "@/Data/constants";
+import { ContactCardType, contactCardData } from "@/lib/constants";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "@emailjs/browser";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { AnimatedItem } from "@/components/ui/AnimatedItem";
 
-
 function ContactInfoCard({ icon: Icon, title, data }: ContactCardType) {
   return (
-    <div
-      className="bg-white dark:bg-[#0f172a] rounded-2xl p-6 border border-[#e2e8f0] dark:border-[#1e293b] shadow-sm transition-colors"
-    >
+    <div className="bg-white dark:bg-[#0f172a] rounded-2xl p-6 border border-[#e2e8f0] dark:border-[#1e293b] shadow-sm transition-colors">
       {/* Icon */}
       <div className="bg-[rgba(37,99,235,0.1)] dark:bg-[rgba(59,130,246,0.15)] w-12 h-12 rounded-[12px] flex items-center justify-center mb-4 transition-colors">
         <Icon size={24} />
@@ -36,7 +33,6 @@ function Contact() {
     email: "",
     message: "",
   });
-
   const [loading, setLoading] = useState(false);
   const handleChange = (e: any) => {
     e.preventDefault();
@@ -74,8 +70,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="bg-gray-50 dark:bg-gray-900 py-16 lg:py-20 transition-colors"
-    >
+      className="bg-gray-50 dark:bg-gray-900 py-16 lg:py-20 transition-colors">
       {/* Background Image */}
       <ToastContainer
         position="top-right"
@@ -96,13 +91,9 @@ function Contact() {
         />
 
         {/* Contact Cards & Form */}
-
         <div className="grid lg:grid-cols-[336px_1fr] gap-6 max-w-276 mx-auto">
           {/* Information Card */}
-          <AnimatedSection 
-           
-  
-          className="flex flex-col gap-6">
+          <AnimatedSection className="flex flex-col gap-6">
             {contactCardData.map((item, index) => (
               <AnimatedItem key={index} type="slideLeft" index={index}>
                 <ContactInfoCard {...item} />
@@ -112,64 +103,61 @@ function Contact() {
 
           {/* Right Side - Contact Form */}
           <AnimatedSection>
-          <AnimatedItem type="slideRight"
-            
-            className="bg-white dark:bg-[#0f172a] rounded-3xl p-10 border border-[#e2e8f0] dark:border-[#1e293b] shadow-xl transition-colors"
-          >
-          
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name Input */}
-              <div>
-                <label className={labelClass}>Your Name</label>
-                <input
-                  name="name"
-                  type="text"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Your Name"
-                  required
-                  className={inputClass}
-                />
-              </div>
+            <AnimatedItem
+              type="slideRight"
+              className="bg-white dark:bg-[#0f172a] rounded-3xl p-10 border border-[#e2e8f0] dark:border-[#1e293b] shadow-xl transition-colors">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Name Input */}
+                <div>
+                  <label className={labelClass}>Your Name</label>
+                  <input
+                    name="name"
+                    type="text"
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder="Your Name"
+                    required
+                    className={inputClass}
+                  />
+                </div>
 
-              {/* Email Input */}
-              <div>
-                <label className={labelClass}>Your Email</label>
-                <input
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Your Email"
-                  required
-                  className={inputClass}
-                />
-              </div>
+                {/* Email Input */}
+                <div>
+                  <label className={labelClass}>Your Email</label>
+                  <input
+                    name="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="Your Email"
+                    required
+                    className={inputClass}
+                  />
+                </div>
 
-              {/* Message Textarea */}
-              <div>
-                <label className={labelClass}>Message</label>
-                <textarea
-                  name="message"
-                  placeholder="Tell me about your project..."
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={5}
-                  className={inputClass}
-                />
-              </div>
+                {/* Message Textarea */}
+                <div>
+                  <label className={labelClass}>Message</label>
+                  <textarea
+                    name="message"
+                    placeholder="Tell me about your project..."
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={5}
+                    className={inputClass}
+                  />
+                </div>
 
-              {/* Submit Button */}
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full bg-primary   text-gray-200  font-semibold text-[18px] leading-6 py-4 rounded-[12px] shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-3 group"
-              >
-                {loading ? "Sending..." : "Send Message"}
-              </button>
-            </form>
-          
-          </AnimatedItem>
+                {/* Submit Button */}
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full bg-primary   text-gray-200  font-semibold text-[18px] leading-6 py-4 rounded-[12px] shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-3 group"
+                >
+                  {loading ? "Sending..." : "Send Message"}
+                </button>
+              </form>
+            </AnimatedItem>
           </AnimatedSection>
         </div>
       </div>

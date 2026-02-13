@@ -21,6 +21,7 @@ export const NavItems = [
     {id:"projects", label:"Projects"},
     {id:"contact", label:"Contact"}
 ]
+
 export interface skillsCardType {
   name: string;
   icon: IconType;
@@ -82,7 +83,6 @@ export interface experienceCardType {
     description: string;
     tags: string[];
 }
-
 export const  experienceCardData:experienceCardType[] = [
     {
       company: "Lintent",
@@ -96,7 +96,6 @@ export const  experienceCardData:experienceCardType[] = [
       tags: ["HTML", "JavaScript", "Tailwind CSS", "React", "Next.js", "TypeScript"],
     },
 ]
-
 
 export interface Links {
   name: string;
@@ -134,7 +133,6 @@ export interface projectsCardType {
   liveUrl:string;
   githubUrl:string
 }
-
 export const projectsCardData:projectsCardType[] = [
     {
       title: "To do List",
@@ -164,7 +162,6 @@ export const projectsCardData:projectsCardType[] = [
       githubUrl: "#",
     },
 ];  
-
 
 export interface ContactCardType {
   icon:IconType,

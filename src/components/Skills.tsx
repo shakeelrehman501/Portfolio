@@ -1,10 +1,9 @@
 "use client";
-import { skillsCardType, skillsCardData } from "@/Data/constants";
+import { skillsCardType, skillsCardData } from "@/lib/constants";
 import Heading from "./ui/Heading";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { AnimatedItem } from "@/components/ui/AnimatedItem";
-import { easeInOut, easeOut, motion } from "framer-motion";
-import { animationVariants } from "@/lib/animations";
+import { easeInOut, motion } from "framer-motion";
 
 function SkillsCard({ icon: Icon, color, name, proficiency }: skillsCardType) {
   return (
@@ -27,17 +26,16 @@ function SkillsCard({ icon: Icon, color, name, proficiency }: skillsCardType) {
             {proficiency}%
           </p>
         </div>
-          <div className="bg-gray-200 dark:bg-gray-700 h-4 rounded-full overflow-hidden">
-        
-            <motion.div
-           initial={{ width: 0 }}
+        <div className="bg-gray-200 dark:bg-gray-700 h-4 rounded-full overflow-hidden">
+          <motion.div
+            initial={{ width: 0 }}
             whileInView={{ width: `${proficiency}%` }}
             viewport={{ once: true }}
-            transition={{ duration: 2,  ease: easeInOut}}
+            transition={{ duration: 2, ease: easeInOut }}
             className="h-full bg-gradient-to-b from-blue-400 to-blue-600 rounded-full transition-all duration-500"
             style={{ width: `${proficiency}%` }}
           />
-          </div>
+        </div>
       </div>
     </div>
   );
@@ -58,7 +56,6 @@ function Skills() {
         />
 
         {/* Skills Grid */}
-
         <AnimatedSection className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillsCardData.map((skill, index) => (
             <AnimatedItem type="slideLeft" index={index} key={index}>

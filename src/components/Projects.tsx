@@ -1,14 +1,13 @@
 "use client"
-import React from 'react'
-import { projectsCardData, projectsCardType } from '@/Data/constants'
+
+import { projectsCardData, projectsCardType } from '@/lib/constants'
 import Heading from './ui/Heading'
 import {AnimatedSection} from "@/components/ui/AnimatedSection"
 import {AnimatedItem} from "@/components/ui/AnimatedItem"
 
 function ProjectCard  ({title, description, image, tags, liveUrl, githubUrl}:projectsCardType){
     return (
-      <div  className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:scale-105 group"
-            >
+      <div  className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:scale-105 group">
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
                 <img
@@ -69,7 +68,6 @@ function ProjectCard  ({title, description, image, tags, liveUrl, githubUrl}:pro
             </div>
     )
 }
-
 
 function Projects() {
   return (

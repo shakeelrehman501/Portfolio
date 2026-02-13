@@ -50,7 +50,7 @@ function Hero() {
                 experience at Boxel Technology. I specialize in building
                 responsive and user-friendly web applications using modern
                 front-end technologies. I focus on creating clean UI designs,
-                smooth user experiences, and optimized performance.
+                smooth user experiences, and optimized performance OK.
               </p>
             </AnimatedItem>
             {/* Download CV Button */}

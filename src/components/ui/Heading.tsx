@@ -13,7 +13,7 @@ type Props = {
 function Heading({ heading, gradientHeading, paragraph, className }: Props) {
   return (
     <AnimatedSection className="text-center mb-16">
-      <AnimatedItem type="slideLeft">
+      <AnimatedItem type="slideLeft" index={0}>
       <div className="flex w-fit mx-auto gap-2.5 font-bold">
         <h1 className="text-4xl  leading-12 lg:text-[48px] text-foreground dark:text-gray-100 ">
           {heading}
@@ -28,13 +28,13 @@ function Heading({ heading, gradientHeading, paragraph, className }: Props) {
         </h1>
       </div>
         </AnimatedItem>
-      <AnimatedItem type="slideUp">
+      <AnimatedItem type="slideUp" index={1}>
       <p className="text-base font-normal font-['Poppins'] text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
         {paragraph}
       </p>
       </AnimatedItem>
 
-      <AnimatedItem type="scale">
+      <AnimatedItem type="scale" index={2}>
       <div className="mt-6 mx-auto w-24 h-2 rounded-full bg-gradient-to-r from-blue-600 to-violet-500" />
       </AnimatedItem>
 

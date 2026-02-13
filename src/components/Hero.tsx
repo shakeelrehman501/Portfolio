@@ -11,7 +11,7 @@ function Hero() {
      <AnimatedSection id="about"
       className="relative bg-white dark:bg-[#0a0e1a]  overflow-hidden transition-colors">
       {/* Gradient Blobs */}
-      <AnimatedItem type='fade'>
+      <AnimatedItem type='fade' index={0}>
       <div className="absolute bg-[rgba(89,22,139,0.2)] dark:bg-[rgba(168,85,247,0.15)] blur-[120px] -left-36 rounded-full w-125 h-125 -top-40 transition-all duration-700" />
       <div className="absolute  bg-[rgba(28,57,142,0.2)] dark:bg-[rgba(59,130,246,0.12)] blur-[120px] right-25 lg:left-380 rounded-full w-125 h-125 top-80 transition-all duration-700" />
     </AnimatedItem>
@@ -20,14 +20,14 @@ function Hero() {
           {/* Left Content */}
           <div className="space-y-6 lg:space-y-12  flex flex-col justify-center">
             <div className='leading-10'>
-              <AnimatedItem type="slideLeft">
+              <AnimatedItem type="slideLeft" index={1}>
               <p
               
               className="font-['Poppins'] font-normal text-[46px] lg:text-[46.093px]  text-[#272646] dark:text-gray-100 transition-colors">
               Hi, I am
             </p>
             </AnimatedItem>
-            <AnimatedItem type='slideUp'>
+            <AnimatedItem type='slideUp' index={2}>
               <h1
             className='font-poppins font-bold text-[56px] lg:text-[68px] leading-normal
                bg-gradient-to-r from-blue-600 to-pink-600
@@ -44,14 +44,14 @@ function Hero() {
             </div>
 
             {/* Description */}
-            <AnimatedItem type="slideLeft">
+            <AnimatedItem type="slideLeft" index={3}>
               <p className="font-['Poppins'] font-normal text-[18px] leading-normal text-[#4a5565] dark:text-gray-300 max-w-[648px] transition-colors">
               I am a Front-End Developer with 6 months of professional experience at Boxel Technology. I specialize in building responsive and user-friendly web applications using modern front-end technologies. I focus on creating clean UI designs, smooth user experiences, and optimized performance.
             </p>
             
             </AnimatedItem>
             {/* Download CV Button */}
-            <AnimatedItem type="slideUp">
+            <AnimatedItem type="slideUp" index={4}>
             <div
             
             >
@@ -80,7 +80,7 @@ function Hero() {
              
               <div className="relative w-100 h-138 lg:w-113 lg:h-160">
                 {/* Glow effect behind image in dark mode */}
-                <AnimatedItem type="fade">
+                <AnimatedItem type="fade" index={0}>
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-2xl opacity-0 dark:opacity-95 transition-opacity duration-700" />
                 {/* Blue border circle */}
                 <div className="absolute inset-0 border-[3px] border-[#0e82eb] dark:border-[#60a5fa] rounded-full transition-colors shadow-lg dark:shadow-blue-500/20" />
@@ -88,7 +88,7 @@ function Hero() {
                 
                 {/* Profile Image */}
                 <div className="absolute inset-0 overflow-hidden rounded-full">
-                <AnimatedItem type="slideRight">
+                <AnimatedItem type="slideRight" index={1}>
               <Tilt>
                   <Image src={'/Image.png'} alt='' width={600} height={300}
                   />

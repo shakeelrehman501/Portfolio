@@ -104,7 +104,7 @@ function Contact() {
   
           className="flex flex-col gap-6">
             {contactCardData.map((item, index) => (
-              <AnimatedItem key={index} type="slideLeft">
+              <AnimatedItem key={index} type="slideLeft" index={index}>
                 <ContactInfoCard {...item} />
               </AnimatedItem>
             ))}

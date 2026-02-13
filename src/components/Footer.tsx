@@ -19,7 +19,7 @@ function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand Section */}
           <div>
-          <AnimatedItem type="slideLeft">
+          <AnimatedItem type="slideLeft" index={0}>
             <h3
               className="w-fit text-2xl font-bold  mb-4
             bg-clip-text text-transparent
@@ -36,7 +36,7 @@ function Footer() {
                 const Icon = social.icon;
                 return (
                   
-                  <AnimatedItem type="slideUp" key={index}  >
+                  <AnimatedItem type="slideUp" key={index} index={index}  >
                   <a 
                     
                     href={social.href}
@@ -59,7 +59,7 @@ function Footer() {
                 
                 <li
                 key={index}>
-                <AnimatedItem type="slideLeft">
+                <AnimatedItem type="slideLeft" index={index}>
                   <button
                     onClick={() => handleFooterItemClick(link.id)}
                     className={`text-gray-400 hover:text-purple-400 transition-colors cursor-pointer

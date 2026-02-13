@@ -82,7 +82,7 @@ useEffect(() => {
       <nav  className="max-w-350 mx-auto px-6  lg:px-8 py-2">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <AnimatedItem type="slideLeft" className="flex items-center gap-2 ">
+          <AnimatedItem type="slideLeft" index={0} className="flex items-center gap-2 ">
             <div
               className="w-10 h-10 rounded-lg text-[20px] text-white font-roboto font-semibold p-5 flex justify-center items-center bg-gradient-to-t from-[#3B82F6] to-[#155DFC] 
         shadow-[0_10px_15px_-3px_rgba(59,130,246,0.2)]
@@ -99,7 +99,7 @@ useEffect(() => {
 
           {/* Desktop Navigation */}
           <AnimatedSection>
-            <AnimatedItem type="slideUp" className="hidden lg:flex items-center">
+            <AnimatedItem type="slideUp" index={1} className="hidden lg:flex items-center">
             <div className="bg-gray-50/50 dark:bg-gray-800/50 rounded-full px-2.5 py-2.5 border border-gray-200/50 dark:border-gray-700/50">
               <div className="flex items-center gap-1">
                 {NavItems.map((item, index) => (
@@ -127,7 +127,7 @@ useEffect(() => {
           </AnimatedSection>
 
           {/* Right Side Icons */}
-          <AnimatedItem type="slideRight" className="hidden lg:flex items-center gap-4">
+          <AnimatedItem type="slideRight" index={0} className="hidden lg:flex items-center gap-4">
             <MenuIcons/>
             <div className="w-px h-6 bg-gray-300 dark:bg-gray-700" />
 

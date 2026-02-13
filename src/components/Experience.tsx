@@ -57,8 +57,8 @@ function ExperienceCard({
           <AnimatedSection
           
           className="flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <AnimatedItem key={tag} type='slideUp'>
+            {tags.map((tag, index) => (
+              <AnimatedItem key={tag} type='slideUp' index={index}>
               <span
               
                 

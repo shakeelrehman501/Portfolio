@@ -82,7 +82,7 @@ function Projects() {
         {/* Projects Grid */}
         <AnimatedSection className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         {projectsCardData.map((project, index) => (
-            <AnimatedItem type='slideUp' key={index}>
+            <AnimatedItem type='slideUp' index={index} key={index}>
               <ProjectCard {...project}/>
             </AnimatedItem>
           ))}

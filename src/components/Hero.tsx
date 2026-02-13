@@ -20,21 +20,21 @@ function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 place-content-center text-center lg:text-left">
           {/* Left Content */}
           <div className="space-y-6 lg:space-y-12  flex flex-col justify-center">
-            <div className="leading-10">
+            <div className="leading-20">
               <AnimatedItem type="slideLeft" index={1}>
                 <p className="font-['Poppins'] font-normal text-[46px] lg:text-[46.093px]  text-[#272646] dark:text-gray-100 transition-colors">
                   Hi, I am
                 </p>
               </AnimatedItem>
-              <AnimatedItem type="slideUp" index={2}>
+              <AnimatedItem type="slideUp" index={2} >
                 <h1
-                  className="font-poppins font-bold text-[56px] lg:text-[68px] leading-normal
+                  className="font-poppins font-bold text-[56px] lg:text-[68px] leading-[55px] sm:leading-normal
                bg-gradient-to-r from-blue-600 to-pink-600
                bg-clip-text text-transparent"
                 >
                   Shakeel Rehman
                 </h1>
-                <p className="font-['Poppins'] font-bold text-[36px] lg:text-[42.481px]  text-[#272646] dark:text-white transition-colors">
+                <p className="leading-tight sm:leading-normal font-bold text-[36px] lg:text-[42.481px]  text-[#272646] dark:text-white transition-colors pt-4 sm:pt-0">
                   I am a{" "}
                   <span className="text-[#0e82eb] dark:text-[#60a5fa]">
                     front-end developer
@@ -45,7 +45,7 @@ function Hero() {
 
             {/* Description */}
             <AnimatedItem type="slideLeft" index={3}>
-              <p className="font-['Poppins'] font-normal text-[18px] leading-normal text-[#4a5565] dark:text-gray-300 max-w-[648px] transition-colors">
+              <p className="px-10 sm:px-0 text-[16px] sm:font-normal sm:text-[18px] leading-normal text-[#4a5565] dark:text-gray-300 max-w-[648px] transition-colors">
                 I am a Front-End Developer with 6 months of professional
                 experience at Boxel Technology. I specialize in building
                 responsive and user-friendly web applications using modern
@@ -81,14 +81,14 @@ function Hero() {
                 <AnimatedItem type="fade" index={0}>
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-2xl opacity-0 dark:opacity-95 transition-opacity duration-700" />
                   {/* Blue border circle */}
-                  <div className="absolute inset-0 border-[3px] border-[#0e82eb] dark:border-[#60a5fa] rounded-full transition-colors shadow-lg dark:shadow-blue-500/20" />
+                  <div className=" absolute mx-10 sm:mx-0 mb-24 sm:mb-0 inset-0 border-[3px] border-[#0e82eb] dark:border-[#60a5fa] rounded-full transition-colors shadow-lg dark:shadow-blue-500/20" />
                 </AnimatedItem>
                 {/* Profile Image */}
-                <div className="absolute inset-0 overflow-hidden rounded-full">
+                <div className="px-10 sm:px-0 absolute inset-0 overflow-hidden rounded-full">
                   <AnimatedItem type="slideRight" index={1}>
                     <Tilt>
                       <Image
-                        src={"/Image.png"}
+                        src={"./Image.png"}
                         alt=""
                         width={600}
                         height={300}

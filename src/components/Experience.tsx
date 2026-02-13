@@ -17,26 +17,26 @@ function ExperienceCard({
 }: experienceCardType) {
   return (
     <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl border-2 border-gray-200 dark:border-gray-700 hover:border-purple-400 dark:hover:border-purple-500 transition-all duration-300 hover:shadow-xl">
-      <div className="flex flex-col lg:flex-row gap-8">
+      <div className="flex flex-col text-center lg:text-start   lg:flex-row gap-8">
         {/* Company Logo */}
-        <div className="flex-shrink-0">
-          <div className=" bg-gray-50 text-[36px] text-primary font-bold dark:text-white dark:bg-gray-700 p-6 rounded-xl shadow-md w-40 h-20 flex items-center justify-center">
+        <div className="flex justify-center sm:flex-shrink-0  ">
+          <div className=" bg-gray-50 text-[36px] text-primary  font-bold dark:text-white dark:bg-gray-700 p-6 rounded-xl shadow-md w-40 h-20 flex items-center justify-center">
             {logo}
           </div>
         </div>
 
         {/* Content */}
         <div className="flex-1">
-          <h3 className="text-3xl lg:text-4xl font-bold  text-gray-700 dark:text-gray-200 mb-2">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold  text-gray-700 dark:text-gray-200 mb-2">
             {position}
           </h3>
-          <p className="text-xl font-normal font-['Poppins'] text-gray-600 dark:text-gray-400 mb-4">
+          <p className="text:lg sm:text-xl font-normal  text-gray-600 dark:text-gray-400 mb-4">
             {type}
           </p>
-          <div className="flex flex-wrap gap-4 mb-6 text-gray-600 dark:text-gray-400">
+          <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-6 text-gray-600 dark:text-gray-400">
             <div className="flex items-center gap-2">
               <span>📅</span>
-              <span className="font-['Poppins']">{date}</span>
+              <span>{date}</span>
             </div>
             <div className="flex items-center gap-2">
               <span>📍</span>
@@ -48,7 +48,7 @@ function ExperienceCard({
           </p>
 
           {/* Tags */}
-          <AnimatedSection className="flex flex-wrap gap-2">
+          <AnimatedSection className="flex flex-wrap justify-center lg:justify-start space-y-5 gap-2">
             {tags.map((tag, index) => (
               <AnimatedItem key={tag} type="slideUp" index={index}>
                 <span className="px-4 py-2 bg-gradient-to-t from-blue-600 to-violet-500 text-white rounded-full text-sm font-medium font-['Poppins']">

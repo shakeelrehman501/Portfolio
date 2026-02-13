@@ -29,7 +29,7 @@ function Heading({ heading, gradientHeading, paragraph, className }: Props) {
       </div>
         </AnimatedItem>
       <AnimatedItem type="slideUp" index={1}>
-      <p className="text-base font-normal font-['Poppins'] text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
+      <p className="text-base font-normal  text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
         {paragraph}
       </p>
       </AnimatedItem>

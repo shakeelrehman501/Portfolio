@@ -22,13 +22,13 @@ function Hero() {
           <div className="space-y-6 lg:space-y-12  flex flex-col justify-center">
             <div className="leading-20">
               <AnimatedItem type="slideLeft" index={1}>
-                <p className="font-['Poppins'] font-normal text-[46px] lg:text-[46.093px]  text-[#272646] dark:text-gray-100 transition-colors">
+                <p className="font-normal text-[46px] lg:text-[46.093px]  text-[#272646] dark:text-gray-100 transition-colors">
                   Hi, I am
                 </p>
               </AnimatedItem>
               <AnimatedItem type="slideUp" index={2} >
                 <h1
-                  className="font-poppins font-bold text-[56px] lg:text-[68px] leading-[55px] sm:leading-normal
+                  className=" font-bold text-[56px] lg:text-[68px] leading-[55px] sm:leading-normal
                bg-gradient-to-r from-blue-600 to-pink-600
                bg-clip-text text-transparent"
                 >

@@ -29,10 +29,10 @@ function ProjectCard  ({title, description, image, tags, liveUrl, githubUrl}:pro
 
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold font-['Poppins'] text-gray-900 dark:text-gray-100 mb-3">
+                <h3 className="text-xl font-bold  text-gray-900 dark:text-gray-100 mb-3">
                   {title}
                 </h3>
-                <p className="text-sm font-normal font-['Poppins'] text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
+                <p className="text-sm font-normal  text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
                   {description}
                 </p>
 
@@ -42,7 +42,7 @@ function ProjectCard  ({title, description, image, tags, liveUrl, githubUrl}:pro
                   {tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-xs font-medium font-['Poppins']"
+                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full text-xs font-medium "
                     >
                       {tag}
                     </span>
@@ -53,13 +53,13 @@ function ProjectCard  ({title, description, image, tags, liveUrl, githubUrl}:pro
                 <div className="flex gap-3">
                   <a
                     href={liveUrl}
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-violet-500 text-white py-2 rounded-lg text-center font-semibold font-['Poppins'] text-sm hover:shadow-lg hover:shadow-purple-500/50 transition-all"
+                    className="flex-1 bg-gradient-to-r from-blue-600 to-violet-500 text-white py-2 rounded-lg text-center font-semibold  text-sm hover:shadow-lg hover:shadow-purple-500/50 transition-all"
                   >
                     Live Demo
                   </a>
                   <a
                     href={githubUrl}
-                    className="flex-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 py-2 rounded-lg text-center font-semibold font-['Poppins'] text-sm hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                    className="flex-1 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-100 py-2 rounded-lg text-center font-semibold  text-sm hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                   >
                     GitHub
                   </a>

@@ -40,10 +40,10 @@ function ExperienceCard({
             </div>
             <div className="flex items-center gap-2">
               <span>📍</span>
-              <span className="font-['Poppins']">{location}</span>
+              <span className="">{location}</span>
             </div>
           </div>
-          <p className="text-base font-normal font-['Poppins'] text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+          <p className="text-base font-normal  text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
             {description}
           </p>
 
@@ -51,7 +51,7 @@ function ExperienceCard({
           <AnimatedSection className="flex flex-wrap justify-center lg:justify-start space-y-5 gap-2">
             {tags.map((tag, index) => (
               <AnimatedItem key={tag} type="slideUp" index={index}>
-                <span className="px-4 py-2 bg-gradient-to-t from-blue-600 to-violet-500 text-white rounded-full text-sm font-medium font-['Poppins']">
+                <span className="px-4 py-2 bg-gradient-to-t from-blue-600 to-violet-500 text-white rounded-full text-sm font-medium ">
                   {tag}
                 </span>
               </AnimatedItem>

@@ -135,13 +135,13 @@ export interface projectsCardType {
 }
 export const projectsCardData:projectsCardType[] = [
     {
-      title: "To do List",
+      title: "Small projects",
       description:
-        "A simple yet powerful to-do list application built with modern web technologies. Features include task creation, editing, deletion, and status tracking with a clean and intuitive user interface.",
-      image: './projectImage.jpg',
-      tags: ["HTML", "CSS", "JavaScript"],
-      liveUrl: "https://boxeltechnology.com/",
-      githubUrl: "https://github.com/shakeelrehman501/Portfolio",
+        "I have created React apps like Todo List, Notes App, Shopping Cart, Counter, and Search Filter, learning how to manage state, reuse components, handle user interactions, and build responsive UI.",
+      image: './smallProject.jpg',
+      tags: ["Tailwind CSS", "React", "JavaScript conepts"],
+      liveUrl: "https://smalprojacts.vercel.app/",
+      githubUrl: "https://github.com/shakeelrehman501/smalprojacts/tree/main/src",
     },
     {
       title: "To do List",

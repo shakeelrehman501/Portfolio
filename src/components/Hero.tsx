@@ -57,7 +57,7 @@ function Hero() {
             <AnimatedItem type="slideUp" index={4}>
               <div>
                 <a
-                  href="https://drive.google.com/file/d/1bDHTzhDLJOayRDzP_ZEuLuPRau-8qM1O/view?usp=drive_open"
+                  href="https://drive.google.com/file/d/1OtNmj252KVmR5CZZZLhSqUAAYa8RLuG8/view"
                   target="_blank"
                   rel="noopener noreferer"
                 >
@@ -89,7 +89,7 @@ function Hero() {
                     <Tilt>
                       <Image
                         src="/myImage.png"
-                        alt="My Image"
+                        alt="My_Image"
                         width={600}
                         height={300}
                       />

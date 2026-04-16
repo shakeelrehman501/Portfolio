@@ -144,22 +144,22 @@ export const projectsCardData:projectsCardType[] = [
       githubUrl: "https://github.com/shakeelrehman501/smalprojacts/tree/main/src",
     },
     {
-      title: "To do List",
+      title: "Boxel Technology",
       description:
-        "A simple yet powerful to-do list application built with modern web technologies. Features include task creation, editing, deletion, and status tracking with a clean and intuitive user interface.",
-      image: './projectImage.jpg',
-      tags: ["HTML", "CSS", "JavaScript"],
-      liveUrl: "#",
-      githubUrl: "#",
+        "I built a complete website for Boxel Technology from scratch using Next.js, implementing page routing and core concepts. This project enhanced my understanding of Next.js fundamentals and real-world application structure.",
+      image: './boxel.png',
+      tags: ["NextJs", "Tailwind CSS", "JavaScript Concepts"],
+      liveUrl: "https://www.boxeltechnology.com/",
+      githubUrl: "https://github.com/shakeelrehman501/boxel_technology",
     },
     {
       title: "To do List",
       description:
-        "A simple yet powerful to-do list application built with modern web technologies. Features include task creation, editing, deletion, and status tracking with a clean and intuitive user interface.",
-      image: './projectImage.jpg',
-      tags: ["HTML", "CSS", "JavaScript", "React",],
-      liveUrl: "#",
-      githubUrl: "#",
+        "I built a fully functional e-commerce website from scratch using React, applying core concepts and modern development practices.",
+      image: './e_commerce_pic.jpg',
+      tags: ["React", "Tailwind CSS", "TypeScript",],
+      liveUrl: "https://e-commerce-project-omega-tawny-54.vercel.app/",
+      githubUrl: "https://github.com/shakeelrehman501/e_commerce_project",
     },
 ];  
 

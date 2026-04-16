@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/components/ui/theme-provider"
 import type { Metadata } from "next";
 import "./globals.css";
+import ScrollToTop from "@/components/ui/ScrollToTop";
 import {Poppins, Roboto } from "next/font/google";
 
 const poppins = Poppins({
@@ -35,6 +36,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
         {children}
+        <ScrollToTop />
           </ThemeProvider>
       </body>
     </html>

@@ -106,12 +106,12 @@ export const socialLinks:Links[] = [
     {
       name: "Facebook",
       icon: LuFacebook,
-      href: "https://github.com/dashboard",
+      href: "https://github.com/shakeelrehman501/Portfolio",
     },
     {
       name: "Github",
       icon: FiGithub,
-      href: "https://github.com/dashboard",
+      href: "https://github.com/shakeelrehman501/Portfolio",
     },
     {
       name: "https://www.linkedin.com/in/shakeel-rehman-332339251/",

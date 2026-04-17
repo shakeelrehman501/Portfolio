@@ -46,7 +46,7 @@ function Hero() {
             {/* Description */}
             <AnimatedItem type="slideLeft" index={3}>
               <p className="px-10 sm:px-0 text-[16px] sm:font-normal sm:text-[18px] leading-normal text-[#4a5565] dark:text-gray-300 max-w-[648px] transition-colors">
-                I am a Front-End Developer with 6 months of professional
+                I am a Front-End Developer with 3 months of professional
                 experience at Boxel Technology. I specialize in building
                 responsive and user-friendly web applications using modern
                 front-end technologies. I focus on creating clean UI designs,

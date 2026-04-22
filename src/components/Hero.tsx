@@ -57,7 +57,7 @@ function Hero() {
             <AnimatedItem type="slideUp" index={4}>
               <div>
                 <a
-                  href="https://drive.google.com/file/d/1yVOCa57wRLL3FuT2mG414n-N624EIK2Q/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1qqy9FJIfAxRONX6c8qtdyutQoTedzQKD/view"
                   target="_blank"
                   rel="noopener noreferer"
                 >

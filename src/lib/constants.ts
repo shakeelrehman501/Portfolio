@@ -134,14 +134,14 @@ export interface projectsCardType {
   githubUrl:string
 }
 export const projectsCardData:projectsCardType[] = [
-    {
-      title: "Small projects",
+  {
+      title: "E-commerce website",
       description:
-        "I have created React apps like Todo List, Notes App, Shopping Cart, Counter, and Search Filter, learning how to manage state, reuse components, handle user interactions, and build responsive UI.",
-      image: './smallProject.jpg',
-      tags: ["Tailwind CSS", "React", "JavaScript conepts"],
-      liveUrl: "https://smalprojacts.vercel.app/",
-      githubUrl: "https://github.com/shakeelrehman501/smalprojacts/tree/main/src",
+        "I built a fully functional e-commerce website from scratch using React, applying core concepts and modern development practices.",
+      image: './e_commerce_pic.jpg',
+      tags: ["React", "Tailwind CSS", "TypeScript",],
+      liveUrl: "https://e-commerce-project-omega-tawny-54.vercel.app/",
+      githubUrl: "https://github.com/shakeelrehman501/e_commerce_project",
     },
     {
       title: "Boxel Technology",
@@ -151,16 +151,27 @@ export const projectsCardData:projectsCardType[] = [
       tags: ["NextJs", "Tailwind CSS", "JavaScript Concepts"],
       liveUrl: "https://www.boxeltechnology.com/",
       githubUrl: "https://github.com/shakeelrehman501/boxel_technology",
-    },
-    {
-      title: "E-commerce website",
+    },  
+  {
+      title: "Small projects",
       description:
-        "I built a fully functional e-commerce website from scratch using React, applying core concepts and modern development practices.",
-      image: './e_commerce_pic.jpg',
-      tags: ["React", "Tailwind CSS", "TypeScript",],
-      liveUrl: "https://e-commerce-project-omega-tawny-54.vercel.app/",
-      githubUrl: "https://github.com/shakeelrehman501/e_commerce_project",
+        "I have created React apps like Todo List, Notes App, Shopping Cart, Counter, and Search Filter, learning how to manage state, reuse components, handle user interactions, and build responsive UI.",
+      image: './smallProject.jpg',
+      tags: ["Tailwind CSS", "React", "JavaScript conepts"],
+      liveUrl: "https://smalprojacts.vercel.app/",
+      githubUrl: "https://github.com/shakeelrehman501/smalprojacts/tree/main/src",
     },
+  {
+      title: "Chat UI",
+      description:
+        "I have built a real-time chat UI from scratch, implementing auto-reply functionality and smooth auto-scroll for a better user experience.",
+      image: './ChatUI_Img.jpg',
+      tags: ["Tailwind CSS", "ReactJS", "Typescript"],
+      liveUrl: "https://chat-ivory-iota.vercel.app/",
+      githubUrl: "https://github.com/shakeelrehman501/Chat",
+    },
+    
+    
 ];  
 
 export interface ContactCardType {

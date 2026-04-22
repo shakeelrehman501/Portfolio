@@ -138,7 +138,7 @@ export const projectsCardData:projectsCardType[] = [
       title: "E-commerce website",
       description:
         "I built a fully functional e-commerce website from scratch using React, applying core concepts and modern development practices.",
-      image: './e_commerce_pic.jpg',
+      image: './e_commerce_pic.JPG',
       tags: ["React", "Tailwind CSS", "TypeScript",],
       liveUrl: "https://e-commerce-project-omega-tawny-54.vercel.app/",
       githubUrl: "https://github.com/shakeelrehman501/e_commerce_project",

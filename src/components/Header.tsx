@@ -37,7 +37,6 @@ function MenuIcons (){
 function Navbar() {
   const [activeLink, setActiveLink] = useState("about");
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   
   const handleMenuItemClick = (sectionId:string)=>{
       setActiveLink(sectionId)
@@ -66,14 +65,6 @@ useEffect(() => {
   window.addEventListener("scroll", handleScroll);
   return () => window.removeEventListener("scroll", handleScroll);
 }, []);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setIsScrolled(window.scrollY > 50);
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
 
   return (
     // Header

@@ -21,7 +21,7 @@ function Hero() {
           {/* Left Content */}
           <div className="space-y-6 lg:space-y-12  flex flex-col justify-center">
             <div className="leading-15">
-              <AnimatedItem type="slideLeft" index={1}>
+              <AnimatedItem type="slideLeft" index={1} className="w-full flex items-center justify-center lg:justify-start">
                 <div className="flex items-center gap-2 border w-fit h-fit px-3 py-1 rounded-full border-gray-400/70 mb-3">
                   <div className="w-2.5 h-2.5 bg-green-400 rounded-full"></div>
                   <span className="text-sm  font-semibold text-[#0e82eb] dark:text-[#60a5fa]">
@@ -42,7 +42,7 @@ function Hero() {
                 >
                   Shakeel Rehman
                 </h1>
-                <p className="leading-tight sm:leading-normal font-bold text-[36px] lg:text-[42.481px]  text-[#272646] dark:text-white transition-colors pt-4 sm:pt-0">
+                <p className="text-wrap leading-tight sm:leading-normal font-bold text-[28px] sm:text-[36px] lg:text-[42.481px]  text-[#272646] dark:text-white transition-colors pt-4 sm:pt-0">
                   Frontend Developer
                 </p>
               </AnimatedItem>

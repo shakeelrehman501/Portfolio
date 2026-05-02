@@ -7,7 +7,6 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     const onScroll = () => {
-      console.log(window.scrollY); // DEBUG (check karo console mein)
       if (window.scrollY > 100) {
         setShow(true);
       } else {

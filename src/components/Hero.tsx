@@ -25,7 +25,7 @@ function Hero() {
                 <div className="flex items-center gap-2 border w-fit h-fit px-3 py-1 rounded-full border-gray-400/70 mb-3">
                   <div className="w-2.5 h-2.5 bg-green-400 rounded-full"></div>
                   <span className="text-sm  font-semibold text-[#0e82eb] dark:text-[#60a5fa]">
-                    Available for Internship / Frontend Roles
+                    Available for Internship / Junior MERN Stack Roles
                   </span>
                 </div>
               </AnimatedItem>
@@ -42,8 +42,8 @@ function Hero() {
                 >
                   Shakeel Rehman
                 </h1>
-                <p className="text-wrap leading-tight sm:leading-normal font-bold text-[28px] sm:text-[36px] lg:text-[42.481px]  text-[#272646] dark:text-white transition-colors pt-4 sm:pt-0">
-                  Frontend Developer
+                <p className="text-wrap leading-tight sm:leading-normal font-semibold text-[28px] sm:text-[36px] lg:text-[42.481px]  text-[#272646] dark:text-white transition-colors pt-4 sm:pt-0">
+                  MERN Stack Developer
                 </p>
               </AnimatedItem>
             </div>
@@ -51,10 +51,7 @@ function Hero() {
             {/* Description */}
             <AnimatedItem type="slideLeft" index={3}>
               <p className="px-10 sm:px-0 text-[16px] sm:font-normal sm:text-[18px] leading-normal text-[#4a5565] dark:text-gray-300 max-w-[648px] transition-colors">
-                I build responsive and user-friendly web applications using
-                modern frontend technologies. I focus on clean UI, smooth user
-                experience, and performance optimization. Currently looking for
-                an opportunity to gain real industry experience.
+                I build full-stack web applications using MongoDB, Express.js, React, and Node.js. I focus on creating responsive, user-friendly, and modern web experiences with clean design and smooth functionality. Currently seeking an opportunity to grow and gain real-world experience as a MERN Stack Developer.
               </p>
             </AnimatedItem>
             {/* Download CV Button */}

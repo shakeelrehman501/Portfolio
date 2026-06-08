@@ -161,17 +161,6 @@ export const projectsCardData:projectsCardType[] = [
       liveUrl: "https://smalprojacts.vercel.app/",
       githubUrl: "https://github.com/shakeelrehman501/smalprojacts/tree/main/src",
     },
-  {
-      title: "Chat UI",
-      description:
-        "I have built a real-time chat UI from scratch, implementing auto-reply functionality and smooth auto-scroll for a better user experience.",
-      image: './ChatUI_Img.JPG',
-      tags: ["Tailwind CSS", "ReactJS", "Typescript"],
-      liveUrl: "https://chat-ivory-iota.vercel.app/",
-      githubUrl: "https://github.com/shakeelrehman501/Chat",
-    },
-    
-    
 ];  
 
 export interface ContactCardType {

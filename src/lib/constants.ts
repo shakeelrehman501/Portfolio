@@ -152,8 +152,8 @@ export const projectsCardData: projectsCardType[] = [
       "I built a fully functional e-commerce website from scratch using React, applying core concepts and modern development practices.",
     image: "./e_commerce_img.JPG",
     tags: ["React", "Tailwind CSS", "TypeScript"],
-    liveUrl: "https://e-commerce-project-omega-tawny-54.vercel.app/",
-    githubUrl: "https://github.com/shakeelrehman501/e_commerce_project",
+    liveUrl: "https://e-commerce-coral-chi-79.vercel.app/",
+    githubUrl: "https://github.com/shakeelrehman501/e-commerce",
   },
   {
     title: "Boxel Technology",
@@ -163,15 +163,6 @@ export const projectsCardData: projectsCardType[] = [
     tags: ["NextJs", "Tailwind CSS", "JavaScript Concepts"],
     liveUrl: "https://www.boxeltechnology.com/",
     githubUrl: "https://github.com/shakeelrehman501/boxel_technology",
-  },
-  {
-    title: "Small projects",
-    description:
-      "I have created React apps like Todo List, Notes App, Shopping Cart, Counter, and Search Filter, learning how to manage state, reuse components, handle user interactions, and build responsive UI.",
-    image: "./smallProject.jpg",
-    tags: ["Tailwind CSS", "React", "JavaScript conepts"],
-    liveUrl: "https://smalprojacts.vercel.app/",
-    githubUrl: "https://github.com/shakeelrehman501/smalprojacts/tree/main/src",
   },
 ];
 

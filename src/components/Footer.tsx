@@ -14,7 +14,7 @@ function Footer() {
   };
 
   return (
-    <AnimatedSection className="relative bg-gray-900 dark:bg-black text-white py-12 overflow-hidden">
+    <AnimatedSection className="relative bg-gray-900 dark:bg-black text-white py-12 px-2 sm:px-8 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand Section */}

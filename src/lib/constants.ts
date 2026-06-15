@@ -1,5 +1,3 @@
-import { TfiHtml5 } from "react-icons/tfi";
-import { IoLogoCss3 } from "react-icons/io";
 import { IconType } from "react-icons";
 import { SiExpress, SiMongodb, SiTailwindcss } from "react-icons/si";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -16,7 +14,6 @@ import { GrLocation } from "react-icons/gr";
 export const NavItems = [
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
-  { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
   { id: "contact", label: "Contact" },
 ];
@@ -78,36 +75,6 @@ export const skillsCardData: skillsCardType[] = [
   },
 ];
 
-export interface experienceCardType {
-  company: string;
-  logo: React.ReactNode;
-  position: string;
-  type: string;
-  date: string;
-  location: string;
-  description: string;
-  tags: string[];
-}
-export const experienceCardData: experienceCardType[] = [
-  {
-    company: "Lintent",
-    logo: "Boxel",
-    position: "Frontend Developer",
-    type: "Internship Hunt",
-    date: "Dec 2025 - Feb 2026",
-    location: "Remote",
-    description:
-      "Gaining valuable experience in frontend development, worked on building responsive web applications and modern user interfaces. Collaborated with teams to develop scalable solutions using modern technologies and best practices. Focused on writing clean, maintainable code and improving user experience through innovative design patterns.",
-    tags: [
-      "HTML",
-      "JavaScript",
-      "Tailwind CSS",
-      "React",
-      "Next.js",
-      "TypeScript",
-    ],
-  },
-];
 
 export interface Links {
   name: string;
@@ -147,22 +114,31 @@ export interface projectsCardType {
 }
 export const projectsCardData: projectsCardType[] = [
   {
-    title: "E-commerce website",
-    description:
-      "I built a fully functional e-commerce website from scratch using React, applying core concepts and modern development practices.",
-    image: "./e_commerce_img.JPG",
-    tags: ["React", "Tailwind CSS", "TypeScript"],
-    liveUrl: "https://e-commerce-coral-chi-79.vercel.app/",
-    githubUrl: "https://github.com/shakeelrehman501/e-commerce",
-  },
-  {
     title: "Boxel Technology",
     description:
       "I built a complete website for Boxel Technology from scratch using Next.js, implementing page routing and core concepts. This project enhanced my understanding of Next.js fundamentals and real-world application structure.",
     image: "./boxel.png",
-    tags: ["NextJs", "Tailwind CSS", "JavaScript Concepts"],
+    tags: ["Next.js", "React.js", "TypeScript", "Tailwind CSS", "JavaScript ES6+"],
     liveUrl: "https://www.boxeltechnology.com/",
     githubUrl: "https://github.com/shakeelrehman501/boxel_technology",
+  },
+  {
+    title: "E-commerce website",
+    description:
+      "I built a fully functional e-commerce website from scratch using React, applying core concepts and modern development practices.",
+    image: "./e_commerce_img.JPG",
+    tags: ["React", "TypeScript", "Tailwind CSS", "JavaScript ES6+"],
+    liveUrl: "https://lahorecarrent.com/",
+    githubUrl: "https://github.com/shakeelrehman501/e-commerce",
+  },
+  {
+    title: "Lahore Car Rental",
+    description:
+      "I developed a Lahore Car Rental website using Next.js. This project improved my frontend skills and strengthened my understanding of modern web development.",
+    image: "./carrental.png",
+    tags: ["Next.js", "React.js", "TypeScript", "Tailwind CSS", "JavaScript ES6+"],
+    liveUrl: "https://www.lahorecarrent.com/",
+    githubUrl: "https://github.com/shakeelrehman501/lahorecarrent",
   },
 ];
 

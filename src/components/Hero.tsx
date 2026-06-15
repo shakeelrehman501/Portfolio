@@ -24,9 +24,15 @@ function Hero() {
               <AnimatedItem type="slideLeft" index={1} className="w-full flex items-center justify-center lg:justify-start">
                 <div className="flex items-center gap-2 border w-fit h-fit px-3 py-1 rounded-full border-gray-400/70 mb-3">
                   <div className="w-2.5 h-2.5 bg-green-400 rounded-full"></div>
-                  <span className="text-sm  font-semibold text-[#0e82eb] dark:text-[#60a5fa]">
-                    Available for Internship / Junior MERN Stack Roles
+                  <div className="flex flex-col sm:flex-row">
+                  <span className="text-sm  font-semibold text-[#0e82eb] dark:text-[#60a5fa] text-wrap">
+                    Available for Internship/
                   </span>
+                  <span className="text-sm  font-semibold text-[#0e82eb] dark:text-[#60a5fa] text-wrap">
+                    Junior MERN Stack Roles 
+                  </span>
+
+                  </div>
                 </div>
               </AnimatedItem>
               <AnimatedItem type="slideLeft" index={1}>
@@ -58,7 +64,7 @@ function Hero() {
             <AnimatedItem type="slideUp" index={4}>
               <div>
                 <a
-                  href="https://drive.google.com/file/d/1qqy9FJIfAxRONX6c8qtdyutQoTedzQKD/view"
+                  href="https://drive.google.com/file/d/1xWoGpLh6-x6Jkn0Ch2iIYt9lFHy4wghw/view"
                   target="_blank"
                   rel="noopener noreferer"
                 >
@@ -91,8 +97,10 @@ function Hero() {
                       <Image
                         src="/myImage.png"
                         alt="My_Image"
-                        width={600}
-                        height={300}
+                        width={1200}
+                        height={900}
+                        priority={true}
+                        loading="eager"
                       />
                     </Tilt>
                   </AnimatedItem>

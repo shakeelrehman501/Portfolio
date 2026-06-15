@@ -70,7 +70,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="bg-gray-50 dark:bg-gray-900 py-16 lg:py-20 transition-colors">
+      className="bg-gray-100 dark:bg-gray-900 py-16 lg:py-20 transition-colors">
       {/* Background Image */}
       <ToastContainer
         position="top-right"

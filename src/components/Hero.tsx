@@ -26,12 +26,8 @@ function Hero() {
                   <div className="w-2.5 h-2.5 bg-green-400 rounded-full"></div>
                   <div className="flex flex-col sm:flex-row">
                   <span className="text-sm  font-semibold text-[#0e82eb] dark:text-[#60a5fa] text-wrap">
-                    Available for Internship/
+                    Available for Junior MERN Stack Roles 
                   </span>
-                  <span className="text-sm  font-semibold text-[#0e82eb] dark:text-[#60a5fa] text-wrap">
-                    Junior MERN Stack Roles 
-                  </span>
-
                   </div>
                 </div>
               </AnimatedItem>

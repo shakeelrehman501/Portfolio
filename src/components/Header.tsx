@@ -13,7 +13,7 @@ function MenuIcons() {
   return (
     <div className="flex items-center gap-2">
       <a
-        href="https://github.com/shakeelrehman501/Portfolio"
+        href="https://github.com/shakeelrehman501"
         target="_blank"
         rel="noopener noreferer"
         className="p-2.5 rounded-xl text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -77,7 +77,7 @@ function Navbar() {
             className="flex items-center gap-2 "
           >
             <div
-              className="w-10 h-10 rounded-lg text-[20px] text-white font-roboto font-semibold p-5 flex justify-center items-center bg-gradient-to-t from-[#3B82F6] to-[#155DFC] 
+              className="w-10 h-10 rounded-lg text-[20px] text-white font-roboto font-semibold p-5 flex justify-center items-center bg-linear-to-t from-[#3B82F6] to-[#155DFC] 
         shadow-[0_10px_15px_-3px_rgba(59,130,246,0.2)]
         shadow-[0_4px_6px_-4px_rgba(59,130,246,0.2)]"
             >

@@ -38,8 +38,8 @@ function Hero() {
               </AnimatedItem>
               <AnimatedItem type="slideUp" index={2}>
                 <h1
-                  className=" font-bold text-[56px] lg:text-[68px] leading-[55px] sm:leading-normal
-               bg-gradient-to-r from-blue-600 to-pink-600
+                  className=" font-bold text-[56px] lg:text-[68px] leading-13.75 sm:leading-normal
+               bg-linear-to-r from-blue-600 to-pink-600
                bg-clip-text text-transparent"
                 >
                   Shakeel Rehman
@@ -52,7 +52,7 @@ function Hero() {
 
             {/* Description */}
             <AnimatedItem type="slideLeft" index={3}>
-              <p className="px-10 sm:px-0 text-[16px] sm:font-normal sm:text-[18px] leading-normal text-[#4a5565] dark:text-gray-300 max-w-[648px] transition-colors">
+              <p className="px-10 sm:px-0 text-[16px] sm:font-normal sm:text-[18px] leading-normal text-[#4a5565] dark:text-gray-300 max-w-162 transition-colors">
                 I build full-stack web applications using MongoDB, Express.js, React, and Node.js. I focus on creating responsive, user-friendly, and modern web experiences with clean design and smooth functionality. Currently seeking an opportunity to grow and gain real-world experience as a MERN Stack Developer.
               </p>
             </AnimatedItem>
@@ -65,7 +65,7 @@ function Hero() {
                   rel="noopener noreferer"
                 >
                   <button
-                    className="bg-gradient-to-r 
+                    className="bg-linear-to-r 
                 from-blue-600 to-violet-700 shadow-2xl text-white font-bold px-8 py-4 rounded-full hover:shadow-xl hover:shadow-purple-500/30 dark:hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 hover:brightness-110"
                   >
                     DOWNLOAD CV
@@ -82,7 +82,7 @@ function Hero() {
               <div className="relative w-100 h-138 lg:w-113 lg:h-160">
                 {/* Glow effect behind image in dark mode */}
                 <AnimatedItem type="fade" index={0}>
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-2xl opacity-0 dark:opacity-95 transition-opacity duration-700" />
+                  <div className="absolute inset-0 bg-linear-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-2xl opacity-0 dark:opacity-95 transition-opacity duration-700" />
                   {/* Blue border circle */}
                   <div className=" absolute mx-10 sm:mx-0 mb-24 sm:mb-0 inset-0 border-[3px] border-[#0e82eb] dark:border-[#60a5fa] rounded-full transition-colors shadow-lg dark:shadow-blue-500/20" />
                 </AnimatedItem>
